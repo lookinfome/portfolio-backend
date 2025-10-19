@@ -7,6 +7,7 @@ import cors from 'cors';
 import userProfileRoute from './routes/userProfileRoutes.js';
 import userEmailRoute from './routes/userEmailRoute.js';
 import userWebsiteRoute from './routes/userWebsiteRoute.js';
+import userWorkDetailsRoute from './routes/userWorkDetails.js';
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ app.use(cors()); // Allow cross-origin requests
 app.use('/api/user-profile', userProfileRoute); // Delegate to route file
 app.use('/api/user-email', userEmailRoute);
 app.use('/api/user-website', userWebsiteRoute);
+app.use('/api/user-work-details', userWorkDetailsRoute);
 
 const PORT = process.env.PORT || 5001;
 
